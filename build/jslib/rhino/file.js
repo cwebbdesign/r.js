@@ -12,7 +12,7 @@ define(function () {
     var file = {
         backSlashRegExp: /\\/g,
 
-        exclusionRegExp: /^\./,
+        exclusionRegExp: /^\.|\/\.svn/,
 
         getLineSeparator: function () {
             return file.lineSeparator;
