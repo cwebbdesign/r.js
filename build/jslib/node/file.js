@@ -55,7 +55,7 @@ define(['fs', 'path'], function (fs, path) {
 
     file = {
         backSlashRegExp: /\\/g,
-        exclusionRegExp: /^\.|\/\.svn/,
+        exclusionRegExp: /^\./,
         getLineSeparator: function () {
             return '/';
         },

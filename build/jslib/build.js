@@ -32,7 +32,7 @@ function (lang,   logger,   file,          parse,    optimize,   pragma,
             preserveLicenseComments: true,
             //By default, all files/directories are copied, unless
             //they match this regexp, by default just excludes .folders
-            dirExclusionRegExp: file.dirExclusionRegExp
+            dirExclusionRegExp: file.dirExclusionRegExp || /^\./
         };
 
     /**
