@@ -279,7 +279,12 @@ function (lang,   logger,   envOptimize,        file,           parse,
                         } else if (config.preserveYUIComments &&
                             (comment.indexOf('!') !== -1 ||
                              comment.indexOf('do not') !== -1 ||
+                             comment.indexOf('DO NOT') !== -1 ||
                              comment.indexOf('yui') !== -1)) {
+                            //Keep the comment, just increment the startIndex
+                            startIndex = endIndex;
+                        } else if (config.preserveIEHacks &&
+                             comment.indexOf('\\') !== -1) {
                             //Keep the comment, just increment the startIndex
                             startIndex = endIndex;
                         }
